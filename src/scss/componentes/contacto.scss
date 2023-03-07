@@ -1,0 +1,80 @@
+@use "../util/" as *;
+
+.contact {
+  gap: 50px;
+
+  @include breakpoint(medium) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.informacion {
+  gap: 25px;
+
+  &__ssnn {
+    gap: 20px;
+  }
+
+  img {
+    width: 30px;
+  }
+}
+
+.form-contact {
+  gap: 60px;
+
+  fieldset{
+    gap: 35px;
+    width: 100%;
+
+    * {
+      width: 100%;
+    }
+
+    legend {
+      margin-bottom: 25px;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    label {
+      font-size: 18px;
+  
+      input[type="text"], input[type="email"]{
+        border: 1px solid $oscuro;
+        background-color: #fafafa;
+        padding: 20px;
+        font-size: 18px;
+      }
+    }
+
+    select {
+      font-size: 18px;
+      border: none;
+      border-bottom: 1px solid $oscuro;
+      padding: 20px;
+    }
+
+    textarea {
+      padding: 20px;
+      font-size: 18px;
+    }
+  }
+
+  input[type="checkbox"] {
+    border: 1px solid $oscuro;
+    width: 15px;
+    aspect-ratio: 1;
+  }
+
+}
+
+.maps {
+  width: 100%;
+
+  @include breakpoint(large) {
+    width: 80%;
+  }
+}

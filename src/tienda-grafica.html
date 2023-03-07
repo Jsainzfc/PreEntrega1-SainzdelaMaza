@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudio de diseño gráfico especializado en branding y páginas web. Compra nuestros árticulos y productos digitales para amantes del diseño gráfico.">
+    <meta name="keyworkds" content="DISEÑO, GRÁFICO, WEB, DESARROLLO, BRANDING">
+    <title>Yellow Cactus Studio - Tienda Gráfica</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/iro3spj.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="/src/scripts/script.js"></script>
+  </head>
+
+  <body>
+    <nav class="navBar">
+
+      <div class="hamburger">
+        <span></span>
+      </div>
+
+      <a href="../index.html">
+        <img class="navBar__logo" src="../assets/logo.png" alt="logo" >
+      </a>
+
+      <div class="flex__col flex--center navBar__menu">
+        <ul class="flex__col flex--center center-text navBar__navigation">
+          <li><a href="../src/soluciones.html">Soluciones</a></li>
+          <li><a href="../src/trabajos.html">Trabajos</a></li>
+          <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
+        </ul>
+        
+        <ul class="flex--center navBar__ssnn">
+          <li><a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png" alt="instagram" ></a></li>
+          <li><a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png" alt="youtube" ></a></li>
+          <li><a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png" alt="linkedin" ></a></li>
+        </ul>
+
+        <a class="navBar__button button" href="../src/contacto.html">Contactar</a>
+      </div>
+  
+      <a class="flex navBar__cart" href="/">
+        <img src="../assets/cart.png" alt="Carrito" />
+        <p>0</p>
+      </a>
+
+    </nav>
+
+    <header class="header--tienda center-text">
+      <h1>Tienda gráfica</h1>
+    </header>
+
+    <main>
+
+      <section data-aos="fade-right" class="tienda container flex--center flex__col">
+        <aside class="tienda__categories flex flex--center">
+          <!-- TODO: añadir en el futuro con javascript un filtro por categoría -->
+          <a>Todas</a>
+          <a>Free</a>
+          <a>Notion</a>
+          <a>Packs</a>
+        </aside>
+        <div class="tienda__products flex__col flex--center">
+          <a>
+            <div class="product flex__col flex--center">
+              <img src="../assets/product-1.png" alt="Imagen de producto que indica: X 30 Gifs ilustrados. Tu branding animado.">
+              <h3>Pack de 30 gifs para tu marca</h3>
+              <p class="product__price">187.00€</p>
+            </div>
+          </a>  
+          <a>
+            <div class="product flex__col flex--center">
+              <img src="../assets/product-2.png" alt="Imagen de producto que muestra una plantilla de notion con el título del producto, un mensaje de que es gratuito y un botón de descarga decorativo.">
+              <h3>Lista de +180 valores de marca</h3>
+              <p class="product__price">14.00€</p>
+            </div>
+          </a> 
+          <a>
+            <div class="product flex__col flex--center">
+              <img src="../assets/product-3.jpg" alt="Imagen de producto que muestra un mockup de varias diapositivas con diseños.">
+              <h3>Guía definitiva para crear tu paleta perfecta</h3>
+              <p class="product__price">8.00€</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer flex__col flex--center center-text">
+      <div class="footer__identity flex__col flex--center">
+        <img src="../assets/logo-white.png" alt="logo" >
+        <p>Branding y estrategia para marcas 360º</p>
+      </div>
+
+      <ul class="footer__navigation flex__col flex--center">
+        <li><a href="../src/soluciones.html">Soluciones</a></li>
+        <li><a href="../src/trabajos.html">Trabajos</a></li>
+        <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
+      </ul>
+
+      <div class="footer__ssnn flex">
+        <a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png" alt="instagram" ></a>
+        <a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png" alt="youtube" ></a>
+        <a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png" alt="linkedin" ></a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".navBar__menu");
+      const navBar = document.querySelector(".navBar");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("transform_active");
+        navMenu.classList.toggle("navBar__menu--active");
+        navBar.classList.toggle("navBar--active")
+      });
+      AOS.init();
+    </script>
+  </body>
+</html>

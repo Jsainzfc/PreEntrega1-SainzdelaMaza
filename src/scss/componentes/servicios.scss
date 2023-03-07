@@ -1,0 +1,32 @@
+@use "../util/" as *;
+
+.servicios {
+  gap: 50px;
+
+  &__items {
+    gap: 80px;
+
+    @include breakpoint (medium) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-start;
+    }
+
+    @include breakpoint (large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.servicio {
+  gap: 25px;
+
+  img {
+    width: 50%;
+  }
+
+  @include breakpoint (medium) {
+    gap: 35px;
+    justify-content: flex-start;
+  }
+}

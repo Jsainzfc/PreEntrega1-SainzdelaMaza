@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudio de diseño gráfico especializado en branding y páginas web. Ejemplos de algunos trabajos realizados previamente.">
+    <meta name="keyworkds" content="DISEÑO, GRÁFICO, WEB, DESARROLLO, BRANDING">
+    <title>Yellow Cactus Studio - Trabajos</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/iro3spj.css">
+  </head>
+
+  <body>
+    <nav class="navBar">
+
+      <div class="hamburger">
+        <span></span>
+      </div>
+
+      <a href="../index.html">
+        <img class="navBar__logo" src="../assets/logo.png" alt="logo" >
+      </a>
+
+      <div class="flex__col flex--center navBar__menu">
+        <ul class="flex__col flex--center center-text navBar__navigation">
+          <li><a href="../src/soluciones.html">Soluciones</a></li>
+          <li><a href="../src/trabajos.html">Trabajos</a></li>
+          <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
+        </ul>
+        
+        <ul class="flex--center navBar__ssnn">
+          <li><a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png" alt="instagram" ></a></li>
+          <li><a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png" alt="youtube" ></a></li>
+          <li><a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png" alt="linkedin" ></a></li>
+        </ul>
+
+        <a class="navBar__button button" href="../src/contacto.html">Contactar</a>
+      </div>
+  
+      <a class="flex navBar__cart" href="/">
+        <img src="../assets/cart.png" alt="Carrito" />
+        <p>0</p>
+      </a>
+
+    </nav>
+
+    <header>
+      <h1 class="center-text">Trabajos</h1>
+    </header>
+
+    <main>
+      <section class="gallery flex--center flex__col">
+        <img src="../assets/gallery-1.jpg" alt="Pegatinas con el logo de Hadashi Studio: dos flores cruzadas." >
+        <img src="../assets/gallery-2.png" alt="Mockup de tres móviles con feed de instagram." >
+        <img src="../assets/gallery-3.jpg" alt="Foto de una revista con un artículo de vitaminas para piel." >
+        <img src="../assets/gallery-4.png" alt="Mockup de tarjetas de visita con el logo de Cattaleia Soul, el nombre y motivos naturales como plantas y hojas." >
+        <img src="../assets/gallery-5.png" alt="Mockup del logo de Cattaleia Soul en una totebag agarrada con una mano." >
+        <img src="../assets/gallery-6.png" alt="Mockup de pegatinas de motivos naturales de Cattaleia Soul en un pequeño sobre de papel con el logo de Cattaleia Soul" >
+        <img src="../assets/gallery-7.png" alt="Mockup de sello con el logo de Cattaleia Soul y una hoja ya sellada." >
+        <img src="../assets/gallery-8.png" alt="Mockup de tarjetas de visita con el logo de Cristina Rus, sus datos de contacto y un QR." >
+        <img src="../assets/gallery-9.png" alt="Mockup de tarjetas de visita de mireya rest, con un leopardo y motivos animal print." >
+      </section>
+
+    </main>
+
+    <footer class="footer flex__col flex--center center-text">
+      <div class="footer__identity flex__col flex--center">
+        <img src="../assets/logo-white.png" alt="logo" >
+        <p>Branding y estrategia para marcas 360º</p>
+      </div>
+
+      <ul class="footer__navigation flex__col flex--center">
+        <li><a href="../src/soluciones.html">Soluciones</a></li>
+        <li><a href="../src/trabajos.html">Trabajos</a></li>
+        <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
+      </ul>
+
+      <div class="footer__ssnn flex">
+        <a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png" alt="instagram" ></a>
+        <a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png" alt="youtube" ></a>
+        <a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png" alt="linkedin" ></a>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".navBar__menu");
+      const navBar = document.querySelector(".navBar");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("transform_active");
+        navMenu.classList.toggle("navBar__menu--active");
+        navBar.classList.toggle("navBar--active")
+      });
+    </script>
+  </body>
+</html>

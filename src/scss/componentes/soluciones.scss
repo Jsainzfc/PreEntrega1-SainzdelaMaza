@@ -1,0 +1,48 @@
+@use "../util/" as *;
+
+.soluciones {
+  gap: 50px;
+
+  &__item {
+    gap: 35px;
+
+    img {
+      width: 50%;
+    }
+
+    @include breakpoint (medium) {
+      width: 45%;
+    }
+
+    @include breakpoint (large) {
+      width: 100%;
+    }
+  }
+
+  @include breakpoint (medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 80px;
+  }
+
+  @include breakpoint (large) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    gap: 150px;
+  }
+}
+
+.solucion {
+  gap: 25px;
+
+  &__list {
+    gap: 20px;
+
+    li {
+      font-size: 18px;
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+@use "../util/" as *;
+
+.footer {
+  background-color: $oscuro;
+  color: $blanco;
+  gap: 25px;
+  padding: 50px 30px;
+
+  &__identity {
+    gap: 10px;
+
+    img {
+      width: 75%;
+    }
+  }
+
+  &__navigation {
+    gap: 25px;
+
+    li a {
+      color: $blanco;
+
+      @include breakpoint(medium) {
+        font-size: 18px;
+      }
+    }
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__ssnn {
+    gap: 20px;
+    justify-self: flex-end;
+
+    img {
+      width: 25px;
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  @include breakpoint(medium) {
+    gap: 50px;
+  }
+
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 80px;
+  }
+}

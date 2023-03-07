@@ -1,0 +1,37 @@
+@use "../globals/" as *;
+@use "../util/" as *;
+
+.header {
+  &--index {
+    @extend .header;
+    background-image: url("../../assets/index-header.jpg");
+  }
+
+  &--soluciones {
+    @extend .header;
+    background-image: url("../../assets/fondo-soluciones.jpg");
+    align-items: center;
+  }
+
+  &--tienda {
+    @extend .header;
+    background-image: url('../../assets/background.jpg');
+
+    h1 {
+      @include breakpoint(large) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &--contact {
+    @extend .header;
+    background-image: url('../../assets/fondo-contact.jpg');
+
+    h1 {
+      @include breakpoint(large) {
+        max-width: 100%;
+      }
+    }
+  }
+}

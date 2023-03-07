@@ -1,0 +1,33 @@
+@use "../util/" as *;
+
+.about {
+  gap: 60px;
+
+  &__item {
+    gap: 25px;
+
+    img {
+      width: 50%;
+    }
+
+    @include breakpoint (medium) {
+      width: 45%;
+      gap: 30px;
+    }
+
+    @include breakpoint (large) {
+      width: 100%;
+    }
+  }
+
+  @include breakpoint (medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint (large) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}

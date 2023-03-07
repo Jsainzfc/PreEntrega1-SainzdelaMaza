@@ -1,0 +1,26 @@
+{
+  "name": "coderhouse",
+  "version": "1.0.0",
+  "description": "Esta preEntrega está directamente basada en la anterior pre-entrega. He cogido el proyecto tal cual lo entregué, he añadido control de versiones con git y subido el proyecto a github, y me va a servir de base para desarrollar el nuevo proyecto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss/style.scss assets/css/style.css",
+    "watch": "nodemon -e scss -x \"npm run build\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsainzfc/coderhouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsainzfc/coderhouse/issues"
+  },
+  "homepage": "https://github.com/Jsainzfc/coderhouse#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sass": "^1.57.1"
+  }
+}
