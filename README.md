@@ -1,6 +1,6 @@
-# PreEntrega1-SainzdelaMaza
+# PreEntrega2-SainzdelaMaza
 
-PreEntrega 1 curso javascript Coderhouse
+PreEntrega 2 curso javascript Coderhouse
 
 ## Objetivo del proyecto
 
@@ -15,10 +15,14 @@ Aunque este proyecto cuenta con varias páginas, todos los esfuerzos se centrar�
 
 El HTML y CSS están montados.
 
-## Alcance de esta preEntrega
+## Alcance de preEntrega1
 
 En esta pre entrega se realizará un prototipo con un alcance limitado. Mediante alerts y prompts se añadirán productos al carrito. El carrito irá realizando la suma de los productos. Calculará el impuesto (si los productos no tienen impuesto establecido se dará por defecto un 21%).
 
 Aunque está incorporado en una página funcional, por ahora no hay interacción entre HTML/CSS y Javascript. El prototipo de javascript funciona mediante la consola, alerts y prompts.
 
 El resto de páginas de HTML pueden ser ignoradas por ahora.
+
+## Alcance de esta preEntrega
+
+En esta pre entrega se mejorará el prototipo de la primera preEntrega aplicando las mejoras sugeridas en los comentarios de la corrección de la primera pre-entrega, haciendo uso de Classes (Objetos) y arrays, y mejorando el orden y limpieza del prototipo. La funcionalidad en sí no se ha modificado, únicamente se ha mejorado.
