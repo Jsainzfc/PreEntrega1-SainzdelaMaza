@@ -39,7 +39,7 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
   }
 
   getDiscount() { // Devuelve la imagen del descuento aplicado al carrito.
-    if (!cart.hasDiscount()) {
+    if (!this.hasDiscount()) {
       return '0€'
     } else {
       if (this.flatDiscount !== 0) {
@@ -75,8 +75,8 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     } else {
       alert(`Contenido del carrito:
       ${this.getProductsImage()}
-      Descuento aplicado: ${cart.getDiscount()}
-      Total: ${cart.getTotal()}€`)
+      Descuento aplicado: ${this.getDiscount()}
+      Total: ${this.getTotal()}€`)
     }
   }
 }
