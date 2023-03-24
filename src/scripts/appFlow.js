@@ -3,8 +3,6 @@ import { initializeProducts, getUser, setUser } from "./manageStorage.js"
 import {initializeBuyerDisplay} from "./buyerDisplay.js"
 import { initializeCartListeners } from "./cartDisplay.js"
 
-let user = getUser() // Variable para saber qué tipo de usuario está registrado actualmente en la sesión
-
 // Constantes para los tres bottones que definirán el flujo de la aplicación
 const buyerSelector = document.querySelector('.buyer--selector')
 const ownerSelector = document.querySelector('.owner--selector')
@@ -20,18 +18,27 @@ const updateButtons = () => {
 // Función al clicar en usuario comprador
 const onBuyerClick = () => {
   updateButtons()
+  document.querySelector('.owner').style.display = 'none'
   document.querySelector('.buyer').style.display = 'flex'
   setUser ('buyer')
 }
 
 // Función al clicar en cambiar de usuario
 const onSwitchClick = () => {
-  null
+  console.log(getUser())
+  if (getUser() === 'buyer') {
+    onOwnerClick()
+  } else {
+    onBuyerClick()
+  }
 }
 
 // Función al clicar en usuario propietario
 const onOwnerClick = () => {
-  null
+  updateButtons()
+  document.querySelector('.owner').style.display = 'flex'
+  document.querySelector('.buyer').style.display = 'none'
+  setUser ('owner')
 }
 
 // Añadimos un control de evento de clicado en los tres botones
@@ -41,9 +48,9 @@ switchSelector.addEventListener('click', onSwitchClick)
 
 // Inicializamos los botones a mostrar en función del usuario registrado en el Session Storage
 const displayInitialize = () => {
-  if (user === 'owner' || user === 'buyer') {
+  if (getUser() === 'owner' || getUser() === 'buyer') {
     switchSelector.style.display = 'block'
-    document.querySelector(`.${user}`).style.display = 'flex'
+    document.querySelector(`.${getUser()}`).style.display = 'flex'
   } else {
     buyerSelector.style.display = 'block'
     ownerSelector.style.display = 'block'
