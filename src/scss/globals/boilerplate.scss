@@ -71,6 +71,7 @@ a, a:visited {
   padding: 10px 16px;
   border-radius: 6px;
   font-size: 16px;
+  cursor: pointer;
 
   @include breakpoint(medium) {
     font-size: 18px;
@@ -193,4 +194,13 @@ main {
   @extend .font-base;
   font-weight: 700;
   font-size: 18px;
+}
+
+input[type="number"]{
+  font-family: 'Poppins', sans-serif;
+  color: $fuente;
+  width: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px;
 }

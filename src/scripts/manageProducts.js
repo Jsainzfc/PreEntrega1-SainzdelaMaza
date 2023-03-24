@@ -1,4 +1,4 @@
-import Product from "./Product" // Objeto que define el producto y sus métodos
+import Product from "./Product.js" // Objeto que define el producto y sus métodos
 
 const addProduct = () => { // función para añadir un producto al carrito
 

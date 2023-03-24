@@ -1,3 +1,5 @@
+import { getCart, setCart } from "./manageStorage.js"
+
 class Cart { // objeto carrito que va a guardar toda la información y métodos para acceder a él
   constructor () { //Inicializa el carrito vacío
     this.items = []
@@ -5,12 +7,24 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     this.percentageDiscount = 0
   }
 
+  build ({items, flatDiscount, percentageDiscount}) {
+    this.items = items
+    this.flatDiscount = flatDiscount
+    this.percentageDiscount = percentageDiscount
+  }
+
+  update () {
+    setCart(JSON.stringify(this))
+  }
+
   addItem (item) { // Añade un nuevo producto al carrito
     this.items.push(item)
+    this.update()
   }
 
   empty () { // Vacía el carrito
     this.items = []
+    this.update()
   }
 
   getTotal() { // Calcula el total del carrito aplicando los descuentos que haya
@@ -74,6 +88,13 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
       ${this.getProductsImage()}
       Descuento aplicado: ${this.getDiscount()}
       Total: ${this.getTotal()}€`)
+    }
+  }
+
+  initialize () {
+    const storedCart = getCart()
+    if (storedCart !== null) {
+      this.build(JSON.parse(storedCart)) 
     }
   }
 }

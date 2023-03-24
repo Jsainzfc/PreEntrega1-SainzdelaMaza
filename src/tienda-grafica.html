@@ -56,36 +56,25 @@
 
     <main>
 
-      <section data-aos="fade-right" class="tienda container flex--center flex__col">
-        <aside class="tienda__categories flex flex--center">
-          <!-- TODO: añadir en el futuro con javascript un filtro por categoría -->
+      <section data-aos="fade-right" class="user-selector flex--center">
+        <button class="button owner--selector">Soy el propietario</button>
+        <button class="button buyer--selector">Soy un comprador</button>
+        <button class="button switch--selector">Cambiar de usuario</button>
+      </section>
+
+      <section data-aos="fade-right" class="tienda container flex--center flex__col buyer">
+        <!-- <aside class="tienda__categories flex flex--center">
+          TODO: añadir en el futuro con javascript un filtro por categoría
           <a>Todas</a>
           <a>Free</a>
           <a>Notion</a>
           <a>Packs</a>
-        </aside>
+        </aside> -->
+        <div class="tienda__products flex__col flex--center"></div>
+      </section>
+
+      <section data-aos="fade-right" class="tienda container flex--center flex__col owner">
         <div class="tienda__products flex__col flex--center">
-          <a>
-            <div class="product flex__col flex--center">
-              <img src="../assets/product-1.png" alt="Imagen de producto que indica: X 30 Gifs ilustrados. Tu branding animado.">
-              <h3>Pack de 30 gifs para tu marca</h3>
-              <p class="product__price">187.00€</p>
-            </div>
-          </a>  
-          <a>
-            <div class="product flex__col flex--center">
-              <img src="../assets/product-2.png" alt="Imagen de producto que muestra una plantilla de notion con el título del producto, un mensaje de que es gratuito y un botón de descarga decorativo.">
-              <h3>Lista de +180 valores de marca</h3>
-              <p class="product__price">14.00€</p>
-            </div>
-          </a> 
-          <a>
-            <div class="product flex__col flex--center">
-              <img src="../assets/product-3.jpg" alt="Imagen de producto que muestra un mockup de varias diapositivas con diseños.">
-              <h3>Guía definitiva para crear tu paleta perfecta</h3>
-              <p class="product__price">8.00€</p>
-            </div>
-          </a>
         </div>
       </section>
 

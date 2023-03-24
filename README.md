@@ -23,6 +23,13 @@ Aunque está incorporado en una página funcional, por ahora no hay interacción
 
 El resto de páginas de HTML pueden ser ignoradas por ahora.
 
-## Alcance de esta preEntrega
+## Alcance de preEntrega2
 
 En esta pre entrega se mejorará el prototipo de la primera preEntrega aplicando las mejoras sugeridas en los comentarios de la corrección de la primera pre-entrega, haciendo uso de Classes (Objetos) y arrays, y mejorando el orden y limpieza del prototipo. La funcionalidad en sí no se ha modificado, únicamente se ha mejorado.
+
+## Alcance de esta preEntrega
+
+En esta pre entrega vamos a trabajar en que el prototipo comience a interactuar con el HTML. Va a haber primero dos cambios fundamentales en el HTML:
+Se va a solicitar en primer lugar que el usuario se identifique como comprador o propietario de la tienda. Esto es una simplificación ya que se hará mediante un simple botón, en un futuro esto se hará mediante autenticación.
+- El propietario podrá: añadir productos, eliminarlos, cambiarles el precio y añadir descuentos. Para simplificar, el propietario no va a añadir imagen del producto sino que simplemente va a cogerse una imagen genérica. Los productos añadidos se guardarán en el Session Storage por ahora. El objetivo final sería conectar el prototipo con una base de datos.
+- El comprador podrá añadir y eliminar productos del carrito. Visualizar el carrito y cerrarlo pulsando el botón de carrito.

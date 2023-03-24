@@ -109,6 +109,7 @@ a, a:visited {
   padding: 10px 16px;
   border-radius: 6px;
   font-size: 16px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .button {
@@ -230,6 +231,15 @@ main {
 .important-text {
   font-weight: 700;
   font-size: 18px;
+}
+
+input[type=number] {
+  font-family: "Poppins", sans-serif;
+  color: #323232;
+  width: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px;
 }
 
 .about {
@@ -643,6 +653,20 @@ main {
   .product {
     gap: 30px;
   }
+}
+.product__form {
+  gap: 20px;
+}
+
+.buyer, .owner {
+  display: none;
+}
+
+.user-selector {
+  gap: 50px;
+}
+.user-selector button {
+  display: none;
 }
 
 .hamburger {

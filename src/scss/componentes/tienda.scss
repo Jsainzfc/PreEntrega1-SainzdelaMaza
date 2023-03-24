@@ -67,4 +67,19 @@
   @include breakpoint (medium) {
     gap: 30px;
   }
+
+  &__form {
+    gap: 20px; 
+  }
+}
+
+.buyer, .owner {
+  display: none;
+}
+
+.user-selector {
+  gap: 50px;
+  button {
+    display: none;
+  }
 }
