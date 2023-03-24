@@ -16,6 +16,7 @@ const addProduct = (e) => {
   openCart()
 }
 
+// Función para eliminar un producto al carrito
 const removeProduct = (e) => {
   cart.removeItem(e.target.id)
 }

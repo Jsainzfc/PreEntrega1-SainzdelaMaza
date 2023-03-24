@@ -1,3 +1,3 @@
 import { initialize } from "./appFlow.js"
 
-initialize() // Inicializamos la aplicación
+initialize() // Inicializamos y lanzamos la aplicación

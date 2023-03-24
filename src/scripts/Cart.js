@@ -8,18 +8,21 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     this.percentageDiscount = 0
   }
 
+  // Actualizar el carrito con nuevos parámetros
   build ({items, flatDiscount, percentageDiscount}) {
     this.items = items
     this.flatDiscount = flatDiscount
     this.percentageDiscount = percentageDiscount
   }
 
+  // Actualizar el carrito en el storage y el HTML
   update () {
     setCart(JSON.stringify(this))
     updateCart(this.items)
   }
 
-  addItem (item) { // Añade un nuevo producto al carrito
+  // Añade un nuevo producto al carrito
+  addItem (item) {
     const index = this.items.findIndex(element => element.name === item.name)
     index === -1   
       ? this.items.push(item)
@@ -27,6 +30,7 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     this.update()
   }
 
+  // Elimina un producto del carrito
   removeItem (id) {
     const index = this.items.findIndex(element => element.id === id)
     index > -1 ? this.items.splice(index, 1) : null
@@ -34,12 +38,14 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     this.update()
   }
 
-  empty () { // Vacía el carrito
+  // Vacía el carrito
+  empty () { 
     this.items = []
     this.update()
   }
 
-  getTotal() { // Calcula el total del carrito aplicando los descuentos que haya
+  // Calcula el total del carrito aplicando los descuentos que haya
+  getTotal() { 
     let total = this.items.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
     if (this.flatDiscount !== 0) {
       total = total - this.flatDiscount
@@ -53,27 +59,13 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     }
   }
 
-  isEmpty() { // Devuelve true si hay algún elemento en el carrito
-    return this.items.length === 0
-  }
-
+  // Devuelve si hay contenido en el carrito
   hasDiscount() {
     return this.flatDiscount !== 0 || this.percentageDiscount !== 0
   }
 
-  getDiscount() { // Devuelve la imagen del descuento aplicado al carrito.
-    if (!this.hasDiscount()) {
-      return '0€'
-    } else {
-      if (this.flatDiscount !== 0) {
-        return `${this.flatDiscount}€`
-      } else {
-        return `${this.percentageDiscount}%`
-      }
-    }
-  }
-
-  addDiscount(isFlat, discount) { // Resetea ñps descuentos y añade uno nuevo
+  // Resetea los descuentos y añade uno nuevo
+  addDiscount(isFlat, discount) { 
     this.flatDiscount = 0
     this.percentageDiscount = 0
     if (isFlat) {
@@ -83,26 +75,7 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     }
   }
 
-  getProductsImage() { // Muestra la imagen de los productos del carrito
-    let image = ''
-    for (let i = 0; i < this.items.length; i++) {
-      image = image + `
-      ${i+1}.- ${this.items[i].image()}`
-    }
-    return image
-  }
-
-  showItems() { // Muestra el contenido del carrito
-    if (this.items.length === 0) {
-      alert('No hay productos en el carrito.')
-    } else {
-      alert(`Contenido del carrito:
-      ${this.getProductsImage()}
-      Descuento aplicado: ${this.getDiscount()}
-      Total: ${this.getTotal()}€`)
-    }
-  }
-
+  // Inicializa el carrito
   initialize () {
     const storedCart = getCart()
     if (storedCart !== null) {

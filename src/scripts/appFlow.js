@@ -50,6 +50,7 @@ const displayInitialize = () => {
   } 
 }
 
+// Realiza todas las labores iniciales de la app: leer el storage y actualizar los displays
 const initialize = () => {
   initializeCartListeners()
   displayInitialize()
