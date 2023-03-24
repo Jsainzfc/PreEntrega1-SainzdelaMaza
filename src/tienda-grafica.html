@@ -43,10 +43,10 @@
         <a class="navBar__button button" href="../src/contacto.html">Contactar</a>
       </div>
   
-      <a class="flex navBar__cart" href="/">
+      <span class="flex navBar__cart" href="/">
         <img src="../assets/cart.png" alt="Carrito" />
         <p>0</p>
-      </a>
+      </span>
 
     </nav>
 
@@ -55,6 +55,12 @@
     </header>
 
     <main>
+
+      <aside class="cart flex__col flex--center">
+        <h4 class="cart__title">Carrito</h4>
+        <div class="cart__content flex--center flex__col"></div>
+        <span class="cart-close"></span>
+      </aside>
 
       <section data-aos="fade-right" class="user-selector flex--center">
         <button class="button owner--selector">Soy el propietario</button>

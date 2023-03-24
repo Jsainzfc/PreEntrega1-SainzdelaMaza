@@ -1,6 +1,7 @@
 // Este módulo exporta todos los métodos para gestionar el flujo de la aplicación.
 import { initializeProducts, getUser, setUser } from "./manageStorage.js"
-import initializeBuyerDisplay from "./buyerDisplay.js"
+import {initializeBuyerDisplay} from "./buyerDisplay.js"
+import { initializeCartListeners } from "./cartDisplay.js"
 
 let user = getUser() // Variable para saber qué tipo de usuario está registrado actualmente en la sesión
 
@@ -50,6 +51,7 @@ const displayInitialize = () => {
 }
 
 const initialize = () => {
+  initializeCartListeners()
   displayInitialize()
   initializeProducts()
   initializeBuyerDisplay()

@@ -1,12 +1,12 @@
 // Este módulo exporta todas las funciones necesarias para gestionar el session storage
-import buildProducts from "./buyerDisplay.js"
+import {initializeBuyerDisplay} from "./buyerDisplay.js"
 import products from "./products.js" // Lista inicial de productos
 
 // Función para inicializar los productos con los básicos o los guardados en la sesión
 const initializeProducts = () => {
   const storedProducts = sessionStorage.getItem('products')
   if (storedProducts === null) sessionStorage.setItem('products', JSON.stringify(products))
-  buildProducts()
+  initializeBuyerDisplay()
 }
 
 // Función que devuelve la info de un producto a través de su id

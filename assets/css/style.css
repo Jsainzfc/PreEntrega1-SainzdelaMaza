@@ -333,6 +333,7 @@ input[type=number] {
 }
 .header--tienda {
   background-image: url("../../assets/background.jpg");
+  min-height: auto;
 }
 @media (min-width: 1200px) {
   .header--tienda h1 {
@@ -439,6 +440,7 @@ input[type=number] {
 }
 .navBar__cart {
   gap: 5px;
+  cursor: pointer;
 }
 .navBar__cart img {
   width: 40px;
@@ -606,6 +608,7 @@ input[type=number] {
 }
 .tienda__products {
   gap: 50px;
+  max-width: 1280px;
 }
 @media (min-width: 768px) {
   .tienda__products {
@@ -804,6 +807,81 @@ input[type=number] {
   .maps {
     width: 80%;
   }
+}
+
+.cart {
+  background-color: #fff;
+  padding: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 20px;
+  gap: 50px;
+  border: 1px solid black;
+  display: none;
+}
+.cart__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+.cart__content {
+  gap: 50px;
+}
+.cart__item {
+  gap: 30px;
+}
+.cart__item img {
+  width: 80px;
+}
+.cart__item--info {
+  position: relative;
+}
+.cart__item--info p {
+  font-weight: 500;
+}
+.cart__item--info .remove-item::after {
+  content: "";
+  background-image: url("/assets/delete.png");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.cart-close {
+  font-weight: 700;
+  font-size: 24px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+.cart-close::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 20px;
+  background-color: black;
+  transform: rotate(45deg);
+  border-radius: 8px;
+}
+.cart-close::before {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 20px;
+  background-color: black;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 0;
+  top: 17px;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

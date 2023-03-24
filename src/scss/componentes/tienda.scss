@@ -21,6 +21,7 @@
 
   &__products {
     gap: 50px;
+    max-width: 1280px;
     
     @include breakpoint (medium) {
       display: grid;

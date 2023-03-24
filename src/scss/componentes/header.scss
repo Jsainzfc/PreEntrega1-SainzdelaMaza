@@ -16,6 +16,7 @@
   &--tienda {
     @extend .header;
     background-image: url('../../assets/background.jpg');
+    min-height: auto;
 
     h1 {
       @include breakpoint(large) {

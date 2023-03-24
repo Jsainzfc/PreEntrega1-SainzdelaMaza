@@ -1,3 +1,4 @@
+import { updateCart } from "./cartDisplay.js"
 import { getCart, setCart } from "./manageStorage.js"
 
 class Cart { // objeto carrito que va a guardar toda la información y métodos para acceder a él
@@ -15,10 +16,21 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
 
   update () {
     setCart(JSON.stringify(this))
+    updateCart(this.items)
   }
 
   addItem (item) { // Añade un nuevo producto al carrito
-    this.items.push(item)
+    const index = this.items.findIndex(element => element.name === item.name)
+    index === -1   
+      ? this.items.push(item)
+      : this.items[index].quantity = this.items[index].quantity + item.quantity
+    this.update()
+  }
+
+  removeItem (id) {
+    const index = this.items.findIndex(element => element.id === id)
+    index > -1 ? this.items.splice(index, 1) : null
+    console.log(this)
     this.update()
   }
 
@@ -96,6 +108,7 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     if (storedCart !== null) {
       this.build(JSON.parse(storedCart)) 
     }
+    this.update()
   }
 }
 
