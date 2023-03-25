@@ -672,6 +672,26 @@ input[type=number] {
   display: none;
 }
 
+.owner {
+  gap: 30px;
+}
+.owner__container {
+  align-items: flex-start;
+  gap: 30px;
+}
+.owner__products {
+  align-items: flex-start;
+  gap: 30px;
+}
+.owner__product {
+  align-items: flex-start;
+  gap: 15px;
+}
+.owner__manage {
+  display: flex;
+  gap: 15px;
+}
+
 .hamburger {
   position: relative;
   width: 40px;

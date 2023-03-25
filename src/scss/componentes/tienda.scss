@@ -84,3 +84,28 @@
     display: none;
   }
 }
+
+
+.owner {
+  gap: 30px;
+
+  &__container {
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &__products {
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &__product {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  &__manage {
+    display: flex;
+    gap: 15px;
+  }
+}

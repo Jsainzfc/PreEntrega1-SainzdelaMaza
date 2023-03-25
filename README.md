@@ -30,6 +30,11 @@ En esta pre entrega se mejorará el prototipo de la primera preEntrega aplicando
 ## Alcance de esta preEntrega
 
 En esta pre entrega vamos a trabajar en que el prototipo comience a interactuar con el HTML. Va a haber primero dos cambios fundamentales en el HTML:
+
 Se va a solicitar en primer lugar que el usuario se identifique como comprador o propietario de la tienda. Esto es una simplificación ya que se hará mediante un simple botón, en un futuro esto se hará mediante autenticación.
+
 - El propietario podrá: añadir productos, eliminarlos, cambiarles el precio y añadir descuentos. Para simplificar, el propietario no va a añadir imagen del producto sino que simplemente va a cogerse una imagen genérica. Los productos añadidos se guardarán en el Session Storage por ahora. El objetivo final sería conectar el prototipo con una base de datos.
+- 
 - El comprador podrá añadir y eliminar productos del carrito. Visualizar el carrito y cerrarlo pulsando el botón de carrito.
+
+Algunas funcionalidades previas se han eliminado: como la gestión de impuestos. Para poder dedicar más tiempo a pontenciar la posibilidad de añadir productos y descuentos por parte del propietario.

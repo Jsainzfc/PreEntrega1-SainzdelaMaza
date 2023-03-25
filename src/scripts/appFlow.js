@@ -2,6 +2,7 @@
 import { initializeProducts, getUser, setUser } from "./manageStorage.js"
 import {  initialize as cartManagerInitialize } from "./cartManager.js"
 import { initializeCartListeners } from "./cartDisplay.js"
+import { initialize as ownerInitialize } from "./owner.js"
 
 // Constantes para los tres bottones que definirán el flujo de la aplicación
 const buyerSelector = document.querySelector('.buyer--selector')
@@ -25,7 +26,6 @@ const onBuyerClick = () => {
 
 // Función al clicar en cambiar de usuario
 const onSwitchClick = () => {
-  console.log(getUser())
   if (getUser() === 'buyer') {
     onOwnerClick()
   } else {
@@ -63,6 +63,7 @@ const initialize = () => {
   displayInitialize()
   initializeProducts()
   cartManagerInitialize()
+  ownerInitialize()
 }
 
 export {initialize}
