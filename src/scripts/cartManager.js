@@ -31,6 +31,11 @@ const formatPrice = (price) => {
   return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR'}).format(price)
 }
 
+// Función para obtener el total del contenido del carrito
+const getTotal = () => {
+  return cart.getTotal()
+}
+
 // Esta función lee los productos del session storage y los construye en el HTML a la vez que 
 // crea eventos de click para cada uno de ellos
 const initialize = () => {
@@ -60,4 +65,4 @@ const initialize = () => {
     .forEach((product) => product.addEventListener('submit', addProduct))
 }
 
-export {initialize, formatPrice, removeProduct, emptyCart}
+export {initialize, formatPrice, removeProduct, emptyCart, getTotal}

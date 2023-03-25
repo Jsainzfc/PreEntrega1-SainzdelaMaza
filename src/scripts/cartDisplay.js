@@ -1,4 +1,4 @@
-import {formatPrice, removeProduct, emptyCart} from './cartManager.js'
+import {formatPrice, removeProduct, emptyCart, getTotal} from './cartManager.js'
 
 const cartDisplay = document.querySelector('.cart')
 const cartClose = document.querySelector('.cart-close')
@@ -31,13 +31,17 @@ const buildProducts = (products) => {
         <img src="../assets/product-1.png" alt="Imagen de producto genérica." />
         <div class="cart__item--info flex__col">
           <p class="info__name">${product.name}</p>
-          <p class="info__price">${product.price}</p>
+          <p class="info__price">${formatPrice(product.price)}</p>
           <p class="info__quantity">x${product.quantity}</p>
           <span id="${product.id}" class="remove-item"></span>
         </div>
       </div>
     `
   }
+
+  productHTML = productHTML + `
+    <p class="cart-total">Total: ${formatPrice(getTotal())}</p>
+  `
 
   productHTML = productHTML + `
     <button class="empty-cart button">Vaciar el carrito</button>

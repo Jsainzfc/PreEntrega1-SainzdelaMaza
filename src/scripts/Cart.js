@@ -45,34 +45,14 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
   }
 
   // Calcula el total del carrito aplicando los descuentos que haya
-  getTotal() { 
+  getTotal(hasDiscount, isFlatDiscount, discount) { 
     let total = this.items.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
-    if (this.flatDiscount !== 0) {
-      total = total - this.flatDiscount
-    } else if (this.percentageDiscount !== 0) {
-      total = total - this.percentageDiscount * total / 100
-    }
-    if (total < 0) {
-      return 0
-    } else {
-      return total
-    }
-  }
-
-  // Devuelve si hay contenido en el carrito
-  hasDiscount() {
-    return this.flatDiscount !== 0 || this.percentageDiscount !== 0
-  }
-
-  // Resetea los descuentos y añade uno nuevo
-  addDiscount(isFlat, discount) { 
-    this.flatDiscount = 0
-    this.percentageDiscount = 0
-    if (isFlat) {
-      this.flatDiscount = discount
-    } else {
-      this.percentageDiscount = discount
-    }
+    hasDiscount
+      ? isFlatDiscount
+        ? total = total - discount
+        : total = total * (100 - discount)
+        : null
+    return total
   }
 
   // Inicializa el carrito
