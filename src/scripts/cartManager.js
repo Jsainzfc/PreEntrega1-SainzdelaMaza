@@ -1,7 +1,7 @@
-// Este módulo contiene métodos para construir y actualizar el display de los productos para el comprador
+// Este módulo contiene métodos para gestionar el carrito
 import { getProductInfo } from "./manageStorage.js"
 import Product from "./Product.js"
-import Cart from "./Cart.js" // Objeto que define el carrito y sus métodos
+import Cart from "./Cart.js"
 import { openCart } from "./cartDisplay.js"
 
 const cart = new Cart() // Creamos el carrito que inicializaremos con la información guardada en el session storage
@@ -21,6 +21,11 @@ const removeProduct = (e) => {
   cart.removeItem(e.target.id)
 }
 
+// Función para vaciar el carrito
+const emptyCart = () => {
+  cart.empty()
+}
+
 // Función para formatear el precio en un string de moneda.
 const formatPrice = (price) => {
   return new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR'}).format(price)
@@ -28,7 +33,7 @@ const formatPrice = (price) => {
 
 // Esta función lee los productos del session storage y los construye en el HTML a la vez que 
 // crea eventos de click para cada uno de ellos
-const initializeBuyerDisplay = () => {
+const initialize = () => {
   cart.initialize()
   const products = JSON.parse(sessionStorage.getItem('products'))
   const productsContainer = document.querySelector('.tienda__products')
@@ -50,8 +55,9 @@ const initializeBuyerDisplay = () => {
     productsHTML = productsHTML + itemHtml
   }
   productsContainer.innerHTML = productsHTML
+  // Añadir eventos para añadir productos al carrito
   document.querySelectorAll('.product__form')
     .forEach((product) => product.addEventListener('submit', addProduct))
 }
 
-export {initializeBuyerDisplay, formatPrice, removeProduct}
+export {initialize, formatPrice, removeProduct, emptyCart}

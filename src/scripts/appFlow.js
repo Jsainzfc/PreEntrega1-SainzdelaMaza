@@ -1,6 +1,6 @@
-// Este módulo exporta todos los métodos para gestionar el flujo de la aplicación.
+// Este módulo gestiona el flujo de la aplicación.
 import { initializeProducts, getUser, setUser } from "./manageStorage.js"
-import {initializeBuyerDisplay} from "./buyerDisplay.js"
+import {  initialize as cartManagerInitialize } from "./cartManager.js"
 import { initializeCartListeners } from "./cartDisplay.js"
 
 // Constantes para los tres bottones que definirán el flujo de la aplicación
@@ -41,13 +41,13 @@ const onOwnerClick = () => {
   setUser ('owner')
 }
 
-// Añadimos un control de evento de clicado en los tres botones
-buyerSelector.addEventListener('click', onBuyerClick)
-ownerSelector.addEventListener('click', onOwnerClick)
-switchSelector.addEventListener('click', onSwitchClick)
-
 // Inicializamos los botones a mostrar en función del usuario registrado en el Session Storage
 const displayInitialize = () => {
+  // Añadimos un control de evento de clicado en los tres botones
+  buyerSelector.addEventListener('click', onBuyerClick)
+  ownerSelector.addEventListener('click', onOwnerClick)
+  switchSelector.addEventListener('click', onSwitchClick)
+
   if (getUser() === 'owner' || getUser() === 'buyer') {
     switchSelector.style.display = 'block'
     document.querySelector(`.${getUser()}`).style.display = 'flex'
@@ -57,12 +57,12 @@ const displayInitialize = () => {
   } 
 }
 
-// Realiza todas las labores iniciales de la app: leer el storage y actualizar los displays
+// Realiza todas las labores iniciales de la app
 const initialize = () => {
   initializeCartListeners()
   displayInitialize()
   initializeProducts()
-  initializeBuyerDisplay()
+  cartManagerInitialize()
 }
 
 export {initialize}

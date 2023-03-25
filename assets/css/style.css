@@ -818,7 +818,7 @@ input[type=number] {
   transform: translate(-50%, -50%);
   z-index: 2;
   border-radius: 20px;
-  gap: 50px;
+  gap: 30px;
   border: 1px solid black;
   display: none;
 }
@@ -827,10 +827,17 @@ input[type=number] {
   font-weight: 500;
 }
 .cart__content {
-  gap: 50px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.cart__content > div {
+  width: 100%;
 }
 .cart__item {
   gap: 30px;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 .cart__item img {
   width: 80px;
