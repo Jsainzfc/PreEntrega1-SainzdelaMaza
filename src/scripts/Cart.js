@@ -4,15 +4,11 @@ import { getCart, setCart } from "./manageStorage.js"
 class Cart { // objeto carrito que va a guardar toda la información y métodos para acceder a él
   constructor () { //Inicializa el carrito vacío
     this.items = []
-    this.flatDiscount = 0
-    this.percentageDiscount = 0
   }
 
   // Actualizar el carrito con nuevos parámetros
-  build ({items, flatDiscount, percentageDiscount}) {
+  build ({items}) {
     this.items = items
-    this.flatDiscount = flatDiscount
-    this.percentageDiscount = percentageDiscount
   }
 
   // Actualizar el carrito en el storage y el HTML
@@ -44,14 +40,9 @@ class Cart { // objeto carrito que va a guardar toda la información y métodos 
     this.update()
   }
 
-  // Calcula el total del carrito aplicando los descuentos que haya
-  getTotal(hasDiscount, isFlatDiscount, discount) { 
+  // Calcula el total del carrito
+  getTotal() { 
     let total = this.items.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
-    hasDiscount
-      ? isFlatDiscount
-        ? total = total - discount
-        : total = total * (100 - discount)
-        : null
     return total
   }
 

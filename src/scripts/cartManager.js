@@ -11,7 +11,7 @@ const addProduct = (e) => {
   e.preventDefault()
   const quantity = document.querySelector(`#${e.target.id} input[type="number"]`).value
   const productInfo = getProductInfo(e.target.id)
-  const product = new Product (e.target.id, productInfo.name, productInfo.price, productInfo.impuesto, parseInt(quantity))
+  const product = new Product (e.target.id, productInfo.name, productInfo.price, parseInt(quantity))
   cart.addItem(product)
   openCart()
 }

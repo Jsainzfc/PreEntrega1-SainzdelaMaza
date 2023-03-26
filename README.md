@@ -37,4 +37,4 @@ Se va a solicitar en primer lugar que el usuario se identifique como comprador o
 - 
 - El comprador podrá añadir y eliminar productos del carrito. Visualizar el carrito y cerrarlo pulsando el botón de carrito.
 
-Algunas funcionalidades previas se han eliminado: como la gestión de impuestos. Para poder dedicar más tiempo a pontenciar la posibilidad de añadir productos y descuentos por parte del propietario.
+Algunas funcionalidades previas se han eliminado: como la gestión de impuestos y de descuentos, para poder dedicar más tiempo a pontenciar la posibilidad de modificar los productos disponibles por parte del propietario. En la entrega final es posible que amplíe el scope volviendo a incluir los impuestos y los descuentos.

@@ -17,6 +17,7 @@ const getProductInfo = (id) => {
   return productFound.info
 }
 
+// Actualiza la información de un producto del session storage
 const updateProductInfo = (id, name, price) => {
   const storedProducts = JSON.parse(sessionStorage.getItem('products'))
   const index = storedProducts.findIndex(product => product.id === id)
@@ -25,6 +26,36 @@ const updateProductInfo = (id, name, price) => {
   sessionStorage.setItem('products', JSON.stringify(storedProducts))
   initialize()
 }
+
+// Elimina un producto del session storage
+const removeProduct = (id) => {
+  const storedProducts = JSON.parse(sessionStorage.getItem('products'))
+  const index = storedProducts.findIndex(product => product.id === id)
+  storedProducts.splice(index, 1)
+  sessionStorage.setItem('products', JSON.stringify(storedProducts))
+  initialize()
+}
+
+// Añade un nuevo producto al session storage
+const addNewProduct = (id, name, price) => {
+  const storedProducts = JSON.parse(sessionStorage.getItem('products'))
+  const index = storedProducts.findIndex(product => product.id === id)
+  if (index > -1) {
+    alert('El id introducido está repetido. Por favor, introduzca un id único.')
+  } else {
+    const newProduct = {
+      id: id,
+      info: {
+        name: name,
+        price: price
+      }
+    }
+    const newProducts = [...storedProducts, newProduct]
+    sessionStorage.setItem('products', JSON.stringify(newProducts))
+    initialize()
+  }
+}
+
 
 // Devuelve el usuario guardado en la sesión
 const getUser = () => {
@@ -46,4 +77,4 @@ const setCart = (cart) => {
   sessionStorage.setItem('cart', cart)
 }
 
-export {initializeProducts, getProductInfo, updateProductInfo, getUser, setUser, getCart, setCart}
+export {initializeProducts, getProductInfo, updateProductInfo, removeProduct, addNewProduct, getUser, setUser, getCart, setCart}
