@@ -19,6 +19,7 @@ const updateButtons = () => {
 // Función al clicar en usuario comprador
 const onBuyerClick = () => {
   updateButtons()
+  cartManagerInitialize()
   document.querySelector('.owner').style.display = 'none'
   document.querySelector('.buyer').style.display = 'flex'
   setUser ('buyer')
