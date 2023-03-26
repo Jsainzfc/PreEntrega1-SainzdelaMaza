@@ -1,21 +1,28 @@
 // Módulo para gestionar las funcionalidades del propietario de la tienda
 
 import { formatPrice } from "./cartManager.js"
+import { updateProductInfo } from "./manageStorage.js"
 
 const saveProduct = (e) => {
   e.preventDefault()
-  console.log(e)
+  const name = document.querySelector(`#name--${e.target.id}`).value
+  const price = document.querySelector(`#price--${e.target.id}`).value
+  updateProductInfo(e.target.id, name, price)
 }
 
 // Callback del evento de editar producto. Abre un formulario de edición del producto.
 const editarProducto = (e) => {
   const edition = document.querySelector(`.owner__edition--${e.target.id}`)
   const innerHTML = `
-    <form id="${e.target.id}" class="owner__edition-submit--${e.target.id}">
-      <label for="name">Nombre</label>
-      <input type="text" name="name" id="name--${e.target.id}">
-      <label for="price">Precio</label>
-      <input type="number" name="price">
+    <form id="${e.target.id}" class="owner__edition--submit owner__edition-submit--${e.target.id}">
+      <div class="owner__edition--name flex__col">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name--${e.target.id}">
+      </div>
+      <div class="owner__edition--price flex__col">
+        <label for="price">Precio</label>
+        <input type="number" name="price" id="price--${e.target.id}">
+      </div>
       <button type="submit" class="button">Guardar</button>
     </form>
   `

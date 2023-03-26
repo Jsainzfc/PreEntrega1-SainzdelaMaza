@@ -691,6 +691,21 @@ input[type=number] {
   display: flex;
   gap: 15px;
 }
+.owner__edition--submit {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.owner__edition--name, .owner__edition--price {
+  gap: 10px;
+}
+.owner__edition--name label, .owner__edition--name input, .owner__edition--price label, .owner__edition--price input {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+.owner__edition--price input {
+  width: 100%;
+}
 
 .hamburger {
   position: relative;

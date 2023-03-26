@@ -108,4 +108,27 @@
     display: flex;
     gap: 15px;
   }
+
+  &__edition {
+    &--submit {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &--name, &--price {
+      gap: 10px;
+
+      label, input {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+      }
+    }
+
+    &--price {
+      input {
+        width: 100%;
+      }
+    }
+  }
 }
