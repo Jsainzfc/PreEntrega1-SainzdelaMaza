@@ -22,8 +22,5 @@
   "devDependencies": {
     "nodemon": "^2.0.20",
     "sass": "^1.57.1"
-  },
-  "dependencies": {
-    "sweetalert2": "^11.4.8"
   }
 }

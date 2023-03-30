@@ -24,6 +24,12 @@ const updateProductInfo = (id, name, price) => {
   storedProducts[index].info.name = name
   storedProducts[index].info.price = price
   sessionStorage.setItem('products', JSON.stringify(storedProducts))
+  Swal.fire({
+    title: 'Producto actualizad',
+    text: 'El producto se ha actualizado correctamente.',
+    icon: 'success',
+    confirmButtonText: 'Aceptar'
+  })
   initialize()
 }
 
@@ -33,6 +39,12 @@ const removeProduct = (id) => {
   const index = storedProducts.findIndex(product => product.id === id)
   storedProducts.splice(index, 1)
   sessionStorage.setItem('products', JSON.stringify(storedProducts))
+  Swal.fire({
+    title: 'Producto eliminado',
+    text: 'El producto se ha eliminado correctamente.',
+    icon: 'success',
+    confirmButtonText: 'Aceptar'
+  })
   initialize()
 }
 
@@ -41,7 +53,12 @@ const addNewProduct = (id, name, price) => {
   const storedProducts = JSON.parse(sessionStorage.getItem('products'))
   const index = storedProducts.findIndex(product => product.id === id)
   if (index > -1) {
-    alert('El id introducido está repetido. Por favor, introduzca un id único.')
+    Swal.fire({
+      title: 'Id repetido',
+      text: 'El id introducido está repetido. Por favor, introduzca un id único.',
+      icon: 'error',
+      confirmButtonText: 'Corregirlo'
+    })
   } else {
     const newProduct = {
       id: id,
@@ -52,6 +69,12 @@ const addNewProduct = (id, name, price) => {
     }
     const newProducts = [...storedProducts, newProduct]
     sessionStorage.setItem('products', JSON.stringify(newProducts))
+    Swal.fire({
+      title: 'Producto creado',
+      text: 'El producto se ha añadido correctamente.',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    })
     initialize()
   }
 }
@@ -77,4 +100,4 @@ const setCart = (cart) => {
   sessionStorage.setItem('cart', cart)
 }
 
-export {initializeProducts, getProductInfo, updateProductInfo, removeProduct, addNewProduct, getUser, setUser, getCart, setCart}
+export { initializeProducts, getProductInfo, updateProductInfo, removeProduct, addNewProduct, getUser, setUser, getCart, setCart }

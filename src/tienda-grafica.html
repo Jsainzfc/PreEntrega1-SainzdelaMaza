@@ -1,125 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Estudio de diseño gráfico especializado en branding y páginas web. Compra nuestros árticulos y productos digitales para amantes del diseño gráfico.">
-    <meta name="keyworkds" content="DISEÑO, GRÁFICO, WEB, DESARROLLO, BRANDING">
-    <title>Yellow Cactus Studio - Tienda Gráfica</title>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/iro3spj.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  </head>
 
-  <body>
-    <nav class="navBar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Estudio de diseño gráfico especializado en branding y páginas web. Compra nuestros árticulos y productos digitales para amantes del diseño gráfico.">
+  <meta name="keyworkds" content="DISEÑO, GRÁFICO, WEB, DESARROLLO, BRANDING">
+  <title>Yellow Cactus Studio - Tienda Gráfica</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/iro3spj.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css
+    " rel="stylesheet">
+</head>
 
-      <div class="hamburger">
-        <span></span>
-      </div>
+<body>
+  <nav class="navBar">
 
-      <a href="../index.html">
-        <img class="navBar__logo" src="../assets/logo.png" alt="logo" >
-      </a>
+    <div class="hamburger">
+      <span></span>
+    </div>
 
-      <div class="flex__col flex--center navBar__menu">
-        <ul class="flex__col flex--center center-text navBar__navigation">
-          <li><a href="../src/soluciones.html">Soluciones</a></li>
-          <li><a href="../src/trabajos.html">Trabajos</a></li>
-          <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
-        </ul>
-        
-        <ul class="flex--center navBar__ssnn">
-          <li><a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png" alt="instagram" ></a></li>
-          <li><a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png" alt="youtube" ></a></li>
-          <li><a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png" alt="linkedin" ></a></li>
-        </ul>
+    <a href="../index.html">
+      <img class="navBar__logo" src="../assets/logo.png" alt="logo">
+    </a>
 
-        <a class="navBar__button button" href="../src/contacto.html">Contactar</a>
-      </div>
-  
-      <span class="flex navBar__cart" href="/">
-        <img src="../assets/cart.png" alt="Carrito" />
-        <p>0</p>
-      </span>
+    <div class="flex__col flex--center navBar__menu">
+      <ul class="flex__col flex--center center-text navBar__navigation">
+        <li><a href="../src/soluciones.html">Soluciones</a></li>
+        <li><a href="../src/trabajos.html">Trabajos</a></li>
+        <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
+      </ul>
 
-    </nav>
+      <ul class="flex--center navBar__ssnn">
+        <li><a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png"
+              alt="instagram"></a></li>
+        <li><a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png"
+              alt="youtube"></a></li>
+        <li><a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png"
+              alt="linkedin"></a></li>
+      </ul>
 
-    <header class="header--tienda center-text">
-      <h1>Tienda gráfica</h1>
-    </header>
+      <a class="navBar__button button" href="../src/contacto.html">Contactar</a>
+    </div>
 
-    <main>
+    <span class="flex navBar__cart" href="/">
+      <img src="../assets/cart.png" alt="Carrito" />
+      <p>0</p>
+    </span>
 
-      <aside class="cart flex__col flex--center">
-        <h4 class="cart__title">Carrito</h4>
-        <div class="cart__content"></div>
-        <span class="cart-close"></span>
-      </aside>
+  </nav>
 
-      <section data-aos="fade-right" class="user-selector flex--center">
-        <button class="button owner--selector">Soy el propietario</button>
-        <button class="button buyer--selector">Soy un comprador</button>
-        <button class="button switch--selector">Cambiar de usuario</button>
-      </section>
+  <header class="header--tienda center-text">
+    <h1>Tienda gráfica</h1>
+  </header>
 
-      <section data-aos="fade-right" class="tienda container flex--center flex__col buyer">
-        <!-- <aside class="tienda__categories flex flex--center">
+  <main>
+
+    <aside class="cart flex__col flex--center">
+      <h4 class="cart__title">Carrito</h4>
+      <div class="cart__content"></div>
+      <span class="cart-close"></span>
+    </aside>
+
+    <section data-aos="fade-right" class="user-selector flex--center">
+      <button class="button owner--selector">Soy el propietario</button>
+      <button class="button buyer--selector">Soy un comprador</button>
+      <button class="button switch--selector">Cambiar de usuario</button>
+    </section>
+
+    <section data-aos="fade-right" class="tienda container flex--center flex__col buyer">
+      <!-- <aside class="tienda__categories flex flex--center">
           TODO: añadir en el futuro con javascript un filtro por categoría
           <a>Todas</a>
           <a>Free</a>
           <a>Notion</a>
           <a>Packs</a>
         </aside> -->
-        <div class="tienda__products flex__col flex--center"></div>
-      </section>
+      <div class="tienda__products flex__col flex--center"></div>
+    </section>
 
-      <section data-aos="fade-right" class="tienda container flex--center flex__col owner">
-        <div class="owner__container flex__col">
-          <h2>Productos actuales:</h2>
-          <div class="owner__products flex__col"></div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="footer flex__col flex--center center-text">
-      <div class="footer__identity flex__col flex--center">
-        <img src="../assets/logo-white.png" alt="logo" >
-        <p>Branding y estrategia para marcas 360º</p>
+    <section data-aos="fade-right" class="tienda container flex--center flex__col owner">
+      <div class="owner__container flex__col">
+        <h2>Productos actuales:</h2>
+        <div class="owner__products flex__col"></div>
       </div>
+    </section>
 
-      <ul class="footer__navigation flex__col flex--center">
-        <li><a href="../src/soluciones.html">Soluciones</a></li>
-        <li><a href="../src/trabajos.html">Trabajos</a></li>
-        <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
-      </ul>
+  </main>
 
-      <div class="footer__ssnn flex">
-        <a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png" alt="instagram" ></a>
-        <a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png" alt="youtube" ></a>
-        <a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png" alt="linkedin" ></a>
-      </div>
-    </footer>
+  <footer class="footer flex__col flex--center center-text">
+    <div class="footer__identity flex__col flex--center">
+      <img src="../assets/logo-white.png" alt="logo">
+      <p>Branding y estrategia para marcas 360º</p>
+    </div>
 
-    <script type="module" src="/src/scripts/main.js"></script>
+    <ul class="footer__navigation flex__col flex--center">
+      <li><a href="../src/soluciones.html">Soluciones</a></li>
+      <li><a href="../src/trabajos.html">Trabajos</a></li>
+      <li><a href="../src/tienda-grafica.html">Tienda Gráfica</a></li>
+    </ul>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const navMenu = document.querySelector(".navBar__menu");
-      const navBar = document.querySelector(".navBar");
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("transform_active");
-        navMenu.classList.toggle("navBar__menu--active");
-        navBar.classList.toggle("navBar--active")
-      });
-      AOS.init();
-    </script>
-  </body>
+    <div class="footer__ssnn flex">
+      <a href="https://www.instagram.com/yellowcactustudio"><img src="../assets/instagram.png" alt="instagram"></a>
+      <a href="https://www.youtube.com/channel/UCVSJtKXJRQF9KXcyZTNyoKA"><img src="../assets/youtube.png"
+          alt="youtube"></a>
+      <a href="https://www.linkedin.com/in/jorge-sainz-de-la-maza-b360b4a5/"><img src="../assets/linkedin.png"
+          alt="linkedin"></a>
+    </div>
+  </footer>
+
+  <script src="
+  https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js
+  "></script>
+  <script type="module" src="/src/scripts/main.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navBar__menu");
+    const navBar = document.querySelector(".navBar");
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("transform_active");
+      navMenu.classList.toggle("navBar__menu--active");
+      navBar.classList.toggle("navBar--active")
+    });
+    AOS.init();
+  </script>
+</body>
+
 </html>
