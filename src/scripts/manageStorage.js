@@ -51,8 +51,7 @@ const removeProduct = (id) => {
 // Añade un nuevo producto al session storage
 const addNewProduct = (id, name, price) => {
   const storedProducts = JSON.parse(sessionStorage.getItem('products'))
-  const index = storedProducts.findIndex(product => product.id === id)
-  if (index > -1) {
+  if (storedProducts.findIndex(product => product.id === id) > -1) {
     Swal.fire({
       title: 'Id repetido',
       text: 'El id introducido está repetido. Por favor, introduzca un id único.',
@@ -78,7 +77,6 @@ const addNewProduct = (id, name, price) => {
     initialize()
   }
 }
-
 
 // Devuelve el usuario guardado en la sesión
 const getUser = () => {
