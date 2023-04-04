@@ -1,12 +1,16 @@
 // Este módulo exporta todas las funciones necesarias para gestionar el session storage
 import { initialize as cartManagerInitialize } from "./cartManager.js"
 import { initialize } from "./owner.js"
-import products from "./products.js" // Lista inicial de productos
 
-// Función para inicializar los productos con los básicos o los guardados en la sesión
-const initializeProducts = () => {
+// Función para inicializar los productos. Si no hay products guardados en la sesión
+// los carga de una falsa API en products.json
+const initializeProducts = async () => {
   const storedProducts = sessionStorage.getItem('products')
-  if (storedProducts === null) sessionStorage.setItem('products', JSON.stringify(products))
+  if (storedProducts === null) {
+    const response = await fetch('./scripts/products.json')
+    const products = await response.json(response)
+    sessionStorage.setItem('products', JSON.stringify(products))
+  }
   cartManagerInitialize()
 }
 
