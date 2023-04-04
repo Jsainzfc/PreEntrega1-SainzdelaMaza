@@ -34,7 +34,6 @@ En esta pre entrega vamos a trabajar en que el prototipo comience a interactuar 
 Se va a solicitar en primer lugar que el usuario se identifique como comprador o propietario de la tienda. Esto es una simplificación ya que se hará mediante un simple botón, en un futuro esto se hará mediante autenticación.
 
 - El propietario podrá: añadir productos, eliminarlos, cambiarles el precio y añadir descuentos. Para simplificar, el propietario no va a añadir imagen del producto sino que simplemente va a cogerse una imagen genérica. Los productos añadidos se guardarán en el Session Storage por ahora. El objetivo final sería conectar el prototipo con una base de datos.
-- 
 - El comprador podrá añadir y eliminar productos del carrito. Visualizar el carrito y cerrarlo pulsando el botón de carrito.
 
 Algunas funcionalidades previas se han eliminado: como la gestión de impuestos y de descuentos, para poder dedicar más tiempo a pontenciar la posibilidad de modificar los productos disponibles por parte del propietario. En la entrega final es posible que amplíe el scope volviendo a incluir los impuestos y los descuentos.
